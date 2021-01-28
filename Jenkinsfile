@@ -3,9 +3,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Building...'
+        echo 'Building... and some comment'
       }
     }
+    
 
     stage('Test') {
       parallel {
