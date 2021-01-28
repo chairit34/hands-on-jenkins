@@ -3,9 +3,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Building...'
+        echo 'Building... and some comment'
       }
     }
+    
 
     stage('Test') {
       parallel {
@@ -17,7 +18,7 @@ pipeline {
 
         stage('Test Chrome') {
           steps {
-            sh 'echo \'Testing Chrom\''
+            sh 'echo \'Testing Chrom\'; exit 1'
           }
         }
 
